@@ -38,7 +38,6 @@ export const fetchDate = () => async (dispatch) => {
   try {
     if (response.data) {
       let date = Object.values(response.data).map((d) => new Date(d));
-      // let datesMap = date.map((d) => new Date(d));
       dispatch(getDate(date));
     } else {
       console.warn("Ще немає дат");
