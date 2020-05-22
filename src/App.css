@@ -6,6 +6,28 @@
   height: 40vmin;
   pointer-events: none;
 }
+.date-custom {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-style: inherit;
+  border-bottom: 2px solid rgb(53, 50, 50);
+  background-color: #bec7d8;
+}
+.react-datepicker__month-container {
+  background-color: rgb(147, 131, 151);
+}
+
+.react-datepicker__day-names {
+  background-color: rgb(164, 111, 214);
+}
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item--disabled {
+  background-color: rgb(212, 30, 30);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
