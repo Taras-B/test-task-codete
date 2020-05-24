@@ -2,7 +2,7 @@ import axios from "axios";
 
 const initialState = [new Date()];
 
-const url = process.env.REACT_APP_DB_URL;
+const url = "https://test-task-codete.firebaseio.com";
 
 const dateReducer = (state = initialState, action) => {
   switch (action.type) {
