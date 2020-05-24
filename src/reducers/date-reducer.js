@@ -1,14 +1,15 @@
 import axios from "axios";
-
+const GET_DATE = "APP/DATE/GET_DATE";
+const ADD_DATE = "APP/DATE/ADD_DATE";
 const initialState = [new Date()];
 
 const url = "https://test-task-codete.firebaseio.com";
 
 const dateReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_DATE":
+    case GET_DATE:
       return [...state, ...action.payload];
-    case "ADD_DATE":
+    case ADD_DATE:
       return [...state, action.payload];
     default:
       return state;
@@ -19,14 +20,14 @@ const dateReducer = (state = initialState, action) => {
 
 export const getDate = (date) => {
   return {
-    type: "GET_DATE",
+    type: GET_DATE,
     payload: date,
   };
 };
 
 export const addDate = (date) => {
   return {
-    type: "ADD_DATE",
+    type: ADD_DATE,
     payload: date,
   };
 };
@@ -43,7 +44,7 @@ export const fetchDate = () => async (dispatch) => {
       console.warn("Ще немає дат");
     }
   } catch (error) {
-    console.warn("Щось пішло не так");
+    console.error("Щось пішло не так", error);
   }
 };
 // post date to firebase database
