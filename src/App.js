@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
   const handleCalendarClose = () => {
-    if (date.getMinutes() !== new Date().getMinutes()) return dispatch(addDataBase(date));
+    return dispatch(addDataBase(date));
   };
 
   return (

@@ -1,6 +1,8 @@
 import axios from "axios";
+
 const GET_DATE = "APP/DATE/GET_DATE";
 const ADD_DATE = "APP/DATE/ADD_DATE";
+
 const initialState = [new Date()];
 
 const url = "https://test-task-codete.firebaseio.com";
